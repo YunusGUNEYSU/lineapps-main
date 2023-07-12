@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
 import 'package:lineapps/features/views/home_view.dart';
 
-class SplashController extends GetxController {
+class SplashController  {
   final Rx<bool> _isLogin = false.obs;
   bool get getLogin => _isLogin.value;
   set setLogin(bool setLogin) => _isLogin.value = setLogin;
