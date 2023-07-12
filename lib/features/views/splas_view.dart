@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
 
 import '../../utils/enum/assets_enum.dart';
@@ -13,11 +14,17 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
-  final SplashController _controller = Get.put<SplashController>(SplashController());
+  final SplashController _controller = Get.find<SplashController>();
+
   @override
   void initState() {
     super.initState();
-    _controller.goHomeScreen();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+
+       _controller.goHomeScreen();
+    });
+
+   
   }
 
   @override
