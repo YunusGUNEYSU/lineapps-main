@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:lineapps/config/localization/app_localization.dart';
-import 'package:lineapps/config/theme/app_theme.dart';
-import 'package:lineapps/features/views/splas_view.dart';
+import 'config/localization/app_localization.dart';
+import 'config/theme/app_theme.dart';
+import 'features/views/splas_view.dart';
 import 'package:get/get.dart';
 
 void main() {

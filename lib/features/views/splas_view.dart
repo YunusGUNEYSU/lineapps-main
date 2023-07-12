@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:lineapps/utils/enum/assets_enum.dart';
-import 'package:lineapps/utils/extensions/asset_extensions.dart';
+import 'package:get/get.dart';
+
+import '../../utils/enum/assets_enum.dart';
+import '../../utils/extensions/asset_extensions.dart';
+import '../controllers/splash_controller.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -10,9 +13,11 @@ class SplashView extends StatefulWidget {
 }
 
 class _SplashViewState extends State<SplashView> {
+  final SplashController _controller = Get.put<SplashController>(SplashController());
   @override
   void initState() {
     super.initState();
+    _controller.goHomeScreen();
   }
 
   @override
