@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:get/get.dart';
-
 import '../../utils/enum/assets_enum.dart';
 import '../../utils/extensions/asset_extensions.dart';
 import '../controllers/splash_controller.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
@@ -19,12 +18,10 @@ class _SplashViewState extends State<SplashView> {
   @override
   void initState() {
     super.initState();
+    FlutterNativeSplash.remove();
     WidgetsBinding.instance.addPostFrameCallback((_) {
-
-       _controller.goHomeScreen();
+      _controller.goHomeScreen();
     });
-
-   
   }
 
   @override
