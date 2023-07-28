@@ -7,7 +7,7 @@ import '../../utils/constants/route_constants.dart';
 import '../../features/binding/home_binding.dart';
 import '../../features/binding/splash_binding.dart';
 
-abstract class AppRoutes {
+final class AppRoutes {
   AppRoutes._();
   static final appRoutes = [
     GetPage(

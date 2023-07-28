@@ -30,7 +30,7 @@ class _SplashViewState extends State<SplashView> {
       body: SafeArea(
           child: Center(
         child: Image.asset(
-          AssetEnum.valoLogo.asset.path,
+          AssetEnum.valoLogo.asset.assetPath,
         ),
       )),
     );
