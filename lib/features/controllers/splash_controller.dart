@@ -1,6 +1,6 @@
 import 'package:get/get.dart';
-import 'package:lineapps/core/duration_manager.dart';
 
+import '../../core/duration_manager.dart';
 import '../../utils/constants/route_constants.dart';
 
 class SplashController {

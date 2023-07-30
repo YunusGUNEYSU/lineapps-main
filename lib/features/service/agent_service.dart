@@ -2,9 +2,9 @@
 import 'dart:io';
 
 import 'package:dio/dio.dart';
-import 'package:lineapps/features/models/agents/agent_model.dart';
-import 'package:lineapps/utils/constants/service_constants.dart';
-import 'package:lineapps/utils/enum/service_path_enum.dart';
+import '../models/agents/agent_model.dart';
+import '../../utils/constants/service_constants.dart';
+import '../../utils/enum/service_path_enum.dart';
 
 abstract class IAgentService {
   late final Dio dio;

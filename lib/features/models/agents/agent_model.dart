@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:lineapps/features/models/agents/abilities_model.dart';
-import 'package:lineapps/features/models/agents/role_model.dart';
+
+import 'abilities_model.dart';
+import 'role_model.dart';
 
 part 'agent_model.freezed.dart';
 part 'agent_model.g.dart';

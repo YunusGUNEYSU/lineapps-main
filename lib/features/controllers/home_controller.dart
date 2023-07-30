@@ -9,6 +9,11 @@ class HomeController extends GetxController {
   set setLoading(bool setLoading) => _isLoading.value = setLoading;
 
   final RxList<AgentModel> _agentList = <AgentModel>[].obs;
+  @override
+  void onInit() {
+    super.onInit();
+    fetchAgents();
+  }
   List get getAgentList => _agentList;
   Future<void> fetchAgents() async {
     setLoading = true;

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:get/get.dart';
+
 import '../../utils/enum/assets_enum.dart';
 import '../../utils/extensions/asset_extensions.dart';
 import '../controllers/splash_controller.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 class SplashView extends StatefulWidget {
   const SplashView({super.key});
