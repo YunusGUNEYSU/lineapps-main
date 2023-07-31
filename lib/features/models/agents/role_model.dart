@@ -8,5 +8,5 @@ class RoleModel with _$RoleModel {
   }
    
   ) = _RoleModel;
-  factory RoleModel.fromJson(Map<String, Object> json) => _$RoleModelFromJson(json);
+  factory RoleModel.fromJson(Map<String, dynamic> json) => _$RoleModelFromJson(json);
 }

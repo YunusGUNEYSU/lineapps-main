@@ -30,8 +30,10 @@ mixin _$AgentModel {
   String? get fullPortraitV2 => throw _privateConstructorUsedError;
   String? get killfeedPortrait => throw _privateConstructorUsedError;
   String? get background => throw _privateConstructorUsedError;
+  List<String>? get backgroundGradientColors =>
+      throw _privateConstructorUsedError;
   bool? get isFullPortraitRightFacing => throw _privateConstructorUsedError;
-  RoleModel? get rolemodel => throw _privateConstructorUsedError;
+  RoleModel? get role => throw _privateConstructorUsedError;
   List<AbilitiesModel>? get abilities => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -57,11 +59,12 @@ abstract class $AgentModelCopyWith<$Res> {
       String? fullPortraitV2,
       String? killfeedPortrait,
       String? background,
+      List<String>? backgroundGradientColors,
       bool? isFullPortraitRightFacing,
-      RoleModel? rolemodel,
+      RoleModel? role,
       List<AbilitiesModel>? abilities});
 
-  $RoleModelCopyWith<$Res>? get rolemodel;
+  $RoleModelCopyWith<$Res>? get role;
 }
 
 /// @nodoc
@@ -87,8 +90,9 @@ class _$AgentModelCopyWithImpl<$Res, $Val extends AgentModel>
     Object? fullPortraitV2 = freezed,
     Object? killfeedPortrait = freezed,
     Object? background = freezed,
+    Object? backgroundGradientColors = freezed,
     Object? isFullPortraitRightFacing = freezed,
-    Object? rolemodel = freezed,
+    Object? role = freezed,
     Object? abilities = freezed,
   }) {
     return _then(_value.copyWith(
@@ -132,13 +136,17 @@ class _$AgentModelCopyWithImpl<$Res, $Val extends AgentModel>
           ? _value.background
           : background // ignore: cast_nullable_to_non_nullable
               as String?,
+      backgroundGradientColors: freezed == backgroundGradientColors
+          ? _value.backgroundGradientColors
+          : backgroundGradientColors // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       isFullPortraitRightFacing: freezed == isFullPortraitRightFacing
           ? _value.isFullPortraitRightFacing
           : isFullPortraitRightFacing // ignore: cast_nullable_to_non_nullable
               as bool?,
-      rolemodel: freezed == rolemodel
-          ? _value.rolemodel
-          : rolemodel // ignore: cast_nullable_to_non_nullable
+      role: freezed == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
               as RoleModel?,
       abilities: freezed == abilities
           ? _value.abilities
@@ -149,13 +157,13 @@ class _$AgentModelCopyWithImpl<$Res, $Val extends AgentModel>
 
   @override
   @pragma('vm:prefer-inline')
-  $RoleModelCopyWith<$Res>? get rolemodel {
-    if (_value.rolemodel == null) {
+  $RoleModelCopyWith<$Res>? get role {
+    if (_value.role == null) {
       return null;
     }
 
-    return $RoleModelCopyWith<$Res>(_value.rolemodel!, (value) {
-      return _then(_value.copyWith(rolemodel: value) as $Val);
+    return $RoleModelCopyWith<$Res>(_value.role!, (value) {
+      return _then(_value.copyWith(role: value) as $Val);
     });
   }
 }
@@ -179,12 +187,13 @@ abstract class _$$_AgentModelCopyWith<$Res>
       String? fullPortraitV2,
       String? killfeedPortrait,
       String? background,
+      List<String>? backgroundGradientColors,
       bool? isFullPortraitRightFacing,
-      RoleModel? rolemodel,
+      RoleModel? role,
       List<AbilitiesModel>? abilities});
 
   @override
-  $RoleModelCopyWith<$Res>? get rolemodel;
+  $RoleModelCopyWith<$Res>? get role;
 }
 
 /// @nodoc
@@ -208,8 +217,9 @@ class __$$_AgentModelCopyWithImpl<$Res>
     Object? fullPortraitV2 = freezed,
     Object? killfeedPortrait = freezed,
     Object? background = freezed,
+    Object? backgroundGradientColors = freezed,
     Object? isFullPortraitRightFacing = freezed,
-    Object? rolemodel = freezed,
+    Object? role = freezed,
     Object? abilities = freezed,
   }) {
     return _then(_$_AgentModel(
@@ -253,13 +263,17 @@ class __$$_AgentModelCopyWithImpl<$Res>
           ? _value.background
           : background // ignore: cast_nullable_to_non_nullable
               as String?,
+      backgroundGradientColors: freezed == backgroundGradientColors
+          ? _value._backgroundGradientColors
+          : backgroundGradientColors // ignore: cast_nullable_to_non_nullable
+              as List<String>?,
       isFullPortraitRightFacing: freezed == isFullPortraitRightFacing
           ? _value.isFullPortraitRightFacing
           : isFullPortraitRightFacing // ignore: cast_nullable_to_non_nullable
               as bool?,
-      rolemodel: freezed == rolemodel
-          ? _value.rolemodel
-          : rolemodel // ignore: cast_nullable_to_non_nullable
+      role: freezed == role
+          ? _value.role
+          : role // ignore: cast_nullable_to_non_nullable
               as RoleModel?,
       abilities: freezed == abilities
           ? _value._abilities
@@ -283,10 +297,12 @@ class _$_AgentModel implements _AgentModel {
       this.fullPortraitV2,
       this.killfeedPortrait,
       this.background,
+      final List<String>? backgroundGradientColors,
       this.isFullPortraitRightFacing,
-      this.rolemodel,
+      this.role,
       final List<AbilitiesModel>? abilities})
-      : _abilities = abilities;
+      : _backgroundGradientColors = backgroundGradientColors,
+        _abilities = abilities;
 
   factory _$_AgentModel.fromJson(Map<String, dynamic> json) =>
       _$$_AgentModelFromJson(json);
@@ -311,10 +327,21 @@ class _$_AgentModel implements _AgentModel {
   final String? killfeedPortrait;
   @override
   final String? background;
+  final List<String>? _backgroundGradientColors;
+  @override
+  List<String>? get backgroundGradientColors {
+    final value = _backgroundGradientColors;
+    if (value == null) return null;
+    if (_backgroundGradientColors is EqualUnmodifiableListView)
+      return _backgroundGradientColors;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(value);
+  }
+
   @override
   final bool? isFullPortraitRightFacing;
   @override
-  final RoleModel? rolemodel;
+  final RoleModel? role;
   final List<AbilitiesModel>? _abilities;
   @override
   List<AbilitiesModel>? get abilities {
@@ -327,7 +354,7 @@ class _$_AgentModel implements _AgentModel {
 
   @override
   String toString() {
-    return 'AgentModel(uuid: $uuid, displayName: $displayName, description: $description, displayIcon: $displayIcon, displayIconSmall: $displayIconSmall, bustPortrait: $bustPortrait, fullPortrait: $fullPortrait, fullPortraitV2: $fullPortraitV2, killfeedPortrait: $killfeedPortrait, background: $background, isFullPortraitRightFacing: $isFullPortraitRightFacing, rolemodel: $rolemodel, abilities: $abilities)';
+    return 'AgentModel(uuid: $uuid, displayName: $displayName, description: $description, displayIcon: $displayIcon, displayIconSmall: $displayIconSmall, bustPortrait: $bustPortrait, fullPortrait: $fullPortrait, fullPortraitV2: $fullPortraitV2, killfeedPortrait: $killfeedPortrait, background: $background, backgroundGradientColors: $backgroundGradientColors, isFullPortraitRightFacing: $isFullPortraitRightFacing, role: $role, abilities: $abilities)';
   }
 
   @override
@@ -354,11 +381,12 @@ class _$_AgentModel implements _AgentModel {
                 other.killfeedPortrait == killfeedPortrait) &&
             (identical(other.background, background) ||
                 other.background == background) &&
+            const DeepCollectionEquality().equals(
+                other._backgroundGradientColors, _backgroundGradientColors) &&
             (identical(other.isFullPortraitRightFacing,
                     isFullPortraitRightFacing) ||
                 other.isFullPortraitRightFacing == isFullPortraitRightFacing) &&
-            (identical(other.rolemodel, rolemodel) ||
-                other.rolemodel == rolemodel) &&
+            (identical(other.role, role) || other.role == role) &&
             const DeepCollectionEquality()
                 .equals(other._abilities, _abilities));
   }
@@ -377,8 +405,9 @@ class _$_AgentModel implements _AgentModel {
       fullPortraitV2,
       killfeedPortrait,
       background,
+      const DeepCollectionEquality().hash(_backgroundGradientColors),
       isFullPortraitRightFacing,
-      rolemodel,
+      role,
       const DeepCollectionEquality().hash(_abilities));
 
   @JsonKey(ignore: true)
@@ -407,8 +436,9 @@ abstract class _AgentModel implements AgentModel {
       final String? fullPortraitV2,
       final String? killfeedPortrait,
       final String? background,
+      final List<String>? backgroundGradientColors,
       final bool? isFullPortraitRightFacing,
-      final RoleModel? rolemodel,
+      final RoleModel? role,
       final List<AbilitiesModel>? abilities}) = _$_AgentModel;
 
   factory _AgentModel.fromJson(Map<String, dynamic> json) =
@@ -435,9 +465,11 @@ abstract class _AgentModel implements AgentModel {
   @override
   String? get background;
   @override
+  List<String>? get backgroundGradientColors;
+  @override
   bool? get isFullPortraitRightFacing;
   @override
-  RoleModel? get rolemodel;
+  RoleModel? get role;
   @override
   List<AbilitiesModel>? get abilities;
   @override

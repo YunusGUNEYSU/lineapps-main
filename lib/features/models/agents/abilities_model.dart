@@ -5,5 +5,5 @@ part 'abilities_model.g.dart';
 class AbilitiesModel with _$AbilitiesModel {
   const factory AbilitiesModel({String? slot, displayName, description, displayIcon}) =
       _AbilitiesModel;
-  factory AbilitiesModel.fromJson(Map<String, Object> json) => _$AbilitiesModelFromJson(json);
+  factory AbilitiesModel.fromJson(Map<String, dynamic> json) => _$AbilitiesModelFromJson(json);
 }

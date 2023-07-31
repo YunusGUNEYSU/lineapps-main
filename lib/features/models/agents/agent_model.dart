@@ -19,9 +19,10 @@ class AgentModel with _$AgentModel {
     String? fullPortraitV2,
     String? killfeedPortrait,
     String? background,
+    List<String>? backgroundGradientColors,
     bool? isFullPortraitRightFacing,
-    RoleModel? rolemodel,
+    RoleModel? role,
     List<AbilitiesModel>? abilities,
   }) = _AgentModel;
-  factory AgentModel.fromJson(Map<String, Object> json) => _$AgentModelFromJson(json);
+  factory AgentModel.fromJson(Map<String, dynamic> json) => _$AgentModelFromJson(json);
 }

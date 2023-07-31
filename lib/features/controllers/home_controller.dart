@@ -1,3 +1,4 @@
+
 import 'package:get/get.dart';
 import 'package:lineapps/features/models/agents/agent_model.dart';
 import 'package:lineapps/features/service/agent_service.dart';
@@ -14,10 +15,12 @@ class HomeController extends GetxController {
     super.onInit();
     fetchAgents();
   }
-  List get getAgentList => _agentList;
+
   Future<void> fetchAgents() async {
     setLoading = true;
     _agentList.value = (await agentService.fetchAgents())!;
     setLoading = false;
   }
+
+  List get getAgentList => _agentList;
 }

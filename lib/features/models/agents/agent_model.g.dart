@@ -18,16 +18,16 @@ _$_AgentModel _$$_AgentModelFromJson(Map<String, dynamic> json) =>
       fullPortraitV2: json['fullPortraitV2'] as String?,
       killfeedPortrait: json['killfeedPortrait'] as String?,
       background: json['background'] as String?,
+      backgroundGradientColors:
+          (json['backgroundGradientColors'] as List<dynamic>?)
+              ?.map((e) => e as String)
+              .toList(),
       isFullPortraitRightFacing: json['isFullPortraitRightFacing'] as bool?,
-      rolemodel: json['rolemodel'] == null
+      role: json['role'] == null
           ? null
-          : RoleModel.fromJson((json['rolemodel'] as Map<String, dynamic>).map(
-              (k, e) => MapEntry(k, e as Object),
-            )),
+          : RoleModel.fromJson(json['role'] as Map<String, dynamic>),
       abilities: (json['abilities'] as List<dynamic>?)
-          ?.map((e) => AbilitiesModel.fromJson((e as Map<String, dynamic>).map(
-                (k, e) => MapEntry(k, e as Object),
-              )))
+          ?.map((e) => AbilitiesModel.fromJson(e as Map<String, dynamic>))
           .toList(),
     );
 
@@ -43,7 +43,8 @@ Map<String, dynamic> _$$_AgentModelToJson(_$_AgentModel instance) =>
       'fullPortraitV2': instance.fullPortraitV2,
       'killfeedPortrait': instance.killfeedPortrait,
       'background': instance.background,
+      'backgroundGradientColors': instance.backgroundGradientColors,
       'isFullPortraitRightFacing': instance.isFullPortraitRightFacing,
-      'rolemodel': instance.rolemodel,
+      'role': instance.role,
       'abilities': instance.abilities,
     };
